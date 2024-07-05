@@ -111,7 +111,7 @@ const Imageuploade: React.FC = () => {
 	const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
 	return (
-		<div className="font-serif bg-gray min-h-screen xl:px-[5rem] xl:py-6">
+		<div className="w-full font-serif bg-gray min-h-screen xl:px-[5rem] xl:py-6">
 			<div className="xl:flex gap-[3rem] items-center">
 			<img className="xl:h-[40rem]" src={"/AF.jpg"} alt="" />
 			<div className="flex flex-col items-center">
@@ -136,27 +136,27 @@ const Imageuploade: React.FC = () => {
 					))}
 				</div>
 			)}
-			<div className='mt-4'>
+			<div className='w-full px-5 mt-4'>
             {uploadFiles.map((file, index) => (
-          <div key={index} className="mb-4">
-            <div className="flex justify-between items-center">
+          <div key={index} className="mb-4 w-full">
+            <div className="flex flex-col w-full">
               <strong>{file.name}</strong>
-              <div className="flex-1 ml-4">
-                <div className="relative pt-1">
-                  <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+              <div className="w-full">
+                <div className="w-full relative flex justify-center gap-4 items-center pt-1">
+                  <div className="w-full overflow-hidden h-2 text-xs flex rounded bg-blue-200">
                     <div
                       style={{ width: `${file.progress}%` }}
                       className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"
                     ></div>
                   </div>
-                  <span className="text-blue-500">
+                  <span className="text-blue-500 w-[4rem]">
                     {Math.round(file.progress)}%
                   </span>
                 </div>
               </div>
             </div>
             {file.status === 'success' && (
-              <div className="text-green-500 mt-2">File uploaded successfully!</div>
+              <div className="text-black-500 mt-2">File uploaded successfully!</div>
             )}
             {file.status === 'error' && (
               <div className="text-red-500 mt-2">Error uploading file.</div>
