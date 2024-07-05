@@ -123,11 +123,9 @@ const Imageuploade: React.FC = () => {
           </p>
 
 			<div  {...getRootProps({ className: 'dropzone pt-8 flex flex-col items-center' })}>
-			<label className="flex flex-col items-center cursor-pointer">
 			<IoCloudUploadOutline className="w-[3rem] h-[3rem]" />
 				<input {...getInputProps()} />
 				<p>Drag & drop some files here, or click to select files</p>
-				</label>
 			</div>
 			{errorMessages.length > 0 && (
 				<div>

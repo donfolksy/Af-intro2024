@@ -5,10 +5,6 @@ const CLIENT_SE = import.meta.env.VITE_CLIENT_SE;
 const REFRESH_TOKEN = import.meta.env.VITE_REFRESH_TOKEN;
 let accessToken = import.meta.env.VITE_ACCESS_TOKEN;
 
-console.log(CLIENT_ID)
-console.log(CLIENT_SE)
-console.log(REFRESH_TOKEN)
-console.log(accessToken)
 
 const getAccessToken = async () => {
 	try {
